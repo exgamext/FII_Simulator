@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rubik:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  user-select: none;
+  transition: all 300ms ease-in-out;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px 0px;
+  font-family: 'Inter';
+  background-color: #eee;
+  gap: 30px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  color: royalblue;
+  max-width: 90%;
+  font-family: 'Rubik';
+}
+
+.card {
+  width: 500px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 3px 3px 6px #00000020;
+  border-radius: 5px;
+  display: none;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card.active {
+  display: flex;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: purple;
+}
+
+.FII {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+input[type="text"], input[type="number"] {
+  background-color: #eee;
+  border: solid 2px transparent;
+  width: 200px;
+  height: 30px;
+  padding-left: 5px;
+  appearance: textfield;
+  font-family: 'Inter';
+  border-radius: 3px;
+}
+
+input:focus {
+  border: solid 2px royalblue;
+}
+
+input::placeholder {
+  text-transform: none;
+}
+
+#FII_Name {
+  text-transform: uppercase;
+}
+
+.time {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+select{
+  width: 200px;
+  height: 30px;
+  padding-left: 5px;
+  border: none;
+  background-color: #eee;
+  font-family: 'Inter';
+}
+
+.reinvest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.btn-simulation {
+  width: 300px;
+  height: 50px;
+  background-color: royalblue;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+  box-shadow: 3px 3px 6px #00000020;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.btn-simulation:hover {
+  background-color: #2f55c9;
+}
+
+/* Resumo */
+.card_resume {
+  width: 700px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 3px 3px 6px #00000020;
+  border-radius: 5px;
+  display: none;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card_resume.active {
+  display: flex;
+}
+
+.Resume {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.R_FII_Name {
+  background-color: royalblue;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.R_Values {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding: 10px;
+}
+
+sup {
+  font-size: 12px;
+  margin-right: 2px;
+}
+
+.R_Card {
+  width: 300px;
+  background-color: #eee;
+  padding: 10px 20px;
+  text-align: left;
+  border-left: 5px solid royalblue;
+  border-radius: 5px;
+  box-shadow: 3px 3px 6px #00000030;
+}
+
+.R_Card_Name {
+  font-size: 14px;
+  color: purple;
+}
+
+.R_Card_Value {
+  font-weight: bold;
+  font-size: 20px;
+  color: royalblue;
+}
+
+.R_Actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Result */
+.result {
+  width: 100%;
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: royalblue;
+  color: #fff;
+}
+
+tr {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 5fr 3fr 3fr 2fr 5fr;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+tbody tr:hover {
+  background-color: #8098e2;
+  box-shadow: 3px 3px 12px #00000030;
+  padding: 15px 0px;
+  color: #fff;
+  font-weight: bold;
+}
+
+th {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 5px;
+}
+
+tbody {
+  background-color: #eee;
+}
+
+td {
+  width: 100%;
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+  background-color: royalblue;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+a:hover {
+  background-color: #2f55c9;
+}

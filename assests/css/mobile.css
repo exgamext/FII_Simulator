@@ -1,0 +1,49 @@
+/* Mobile Version */
+@media (max-width: 1024px) {
+  .card {
+    width: 90%;
+  }
+
+  input[type="text"], input[type="number"], select {
+    width: 100%;
+  }
+
+  .time {
+    flex-wrap: nowrap;
+  }
+
+  #FII_TimeType {
+    width: 50%;
+  }
+
+  /* Resume */
+  .card_resume{ 
+    width: 90%;
+  }
+
+  .R_FII_Name {
+    font-size: 12px;
+  }
+
+  .R_Values {
+    flex-direction: column;
+    gap: 10px;
+    width: 110%;
+  }
+
+  .R_Card {
+    width: 100%;
+  }
+
+  .R_Actions {
+    flex-direction: column;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  tr {
+    width: 85vw;
+  }
+}

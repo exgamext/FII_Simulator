@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de FII</title>
+  <link rel="shortcut icon" href="assests/images/logo.png" type="image/x-icon">
+
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="assests/css/main.css">
+  <link rel="stylesheet" href="assests/css/mobile.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body onload="onLoad()">
+  <div class="title" align="center">Simulador de FII</div>
+
+  <div id="simulation_card" class="card active">
+    <div class="subtitle" align="center">Informações sobre o fundo</div>
+    <div class="FII">
+      <input type="text" id="FII_Name" placeholder="Nome do Fundo">
+      <input class="money" type="text" inputmode="numeric" id="FII_Price" placeholder="Valor da cota">
+      <input class="money" type="text" inputmode="numeric" id="FII_LastDiv" placeholder="Último Rendimento">
+      <input class="yeld" type="text" inputmode="numeric" id="FII_Yield" placeholder="Dividend Yield">
+    </div>
+    <div class="subtitle" align="center">Informações sobre o investimento</div>
+    <div class="FII">
+      <input class="money" type="text" inputmode="numeric" id="FII_Initial" placeholder="Investimento inicial">
+      <input class="money" type="text" inputmode="numeric" id="FII_Month" placeholder="Investimento mensal">
+      <div class="time">
+        <input id="FII_Time" type="number" pattern="\d{4,4}" placeholder="Tempo de investimento">
+        <select id="FII_TimeType">
+          <option value="month">Meses</option>
+          <option value="year">Anos</option>
+        </select>
+      </div>
+      <div class="reinvest">
+        <input type="checkbox" name="" id="FII_ReInvest">
+        <label for="FII_ReInvest">Reinvestir rendimentos</label>
+      </div>
+    </div>
+    <div class="btn-simulation" onclick="Simulate()">
+      <i class="uil btn-icon uil-chart-line"></i>
+      <div class="btn-text">Simular investimento</div>
+    </div>
+  </div>
+
+  <div id="resume_short" class="card_resume">
+    <div class="subtitle" align="center">Resultado da simulação de investimento</div>
+    <div class="Resume">
+      
+      <div class="R_Values" id="SaveResume">
+        <div class="R_FII_Name" id="R_FII_Name" align="center">MXRF11 | R$ 10,77 | R$ 0,11 | DY 12,07%</div>
+        <div class="R_Card">
+          <div class="R_Card_Name">Patrimônio</div>
+          <div id="R_TotalResult" class="money R_Card_Value"></div>
+        </div>
+        <div class="R_Card">
+          <div class="R_Card_Name">Total investido</div>
+          <div id="R_TotalInvest" class="R_Card_Value"></div>
+        </div>
+        <div class="R_Card">
+          <div class="R_Card_Name">Total Reinvestidos</div>
+          <div id="R_TotalReInv" class="R_Card_Value"></div>
+        </div>
+        <div class="R_Card">
+          <div class="R_Card_Name">Dividendos</div>
+          <div id="R_TotalDiv" class="R_Card_Value"></div>
+        </div>
+        <div class="R_Card">
+          <div class="R_Card_Name">Investimento inicial</div>
+          <div id="R_Initial" class="R_Card_Value"></div>
+        </div>
+        <div class="R_Card">
+          <div class="R_Card_Name">Investimento mensal</div>
+          <div id="R_Month" class="R_Card_Value"></div>
+        </div>
+        <div class="R_Card">
+          <div class="R_Card_Name">Cotas adquiridas</div>
+          <div id="R_Cotas" class="R_Card_Value"></div>
+        </div>
+        <div class="R_Card">
+          <div class="R_Card_Name">Tempo investido</div>
+          <div id="R_Time" class="R_Card_Value"></div>
+        </div>
+      </div>
+      <div class="R_Actions">
+        <div class="btn-simulation" onclick="NewSimulation()">
+          <i class="uil btn-icon uil-plus"></i>
+          <div class="btn-text">Fazer outra simulação</div>
+        </div>
+        <div class="btn-simulation" onclick="MoreDetails()">
+          <i class="uil btn-icon uil-file-plus-alt"></i>
+          <div class="btn-text">Ver detalhes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="resume_detail" class="card_resume">
+    <div align="center" class="subtitle">Resumo detalhado sobre investimento</div>
+    <div class="result">
+      <table>
+        <thead>
+            <tr>
+                <th>Mês</th>
+                <th>Investimento</th>
+                <th>Cotas Adquiridas</th>
+                <th>Cotas Totais</th>
+                <th>Troco</th>
+                <th>Dividendos</th>
+            </tr>
+        </thead>
+        <tbody class="resultData">
+           
+        </tbody>
+    </table> 
+    </div>
+  </div>
+
+  <a href="https://exgamext.netlify.app/" target="_blank">Powered by XCode</a>
+  
+  <!-- Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+  <script src="assests/js/app.js"></script>
+</body>
+</html>
